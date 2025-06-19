@@ -1,105 +1,119 @@
-# Taxi Management System (CS201 Project) (Group 23)
+# Taxi Management System
 
-A C++ application that simulates a taxi routing and management system using **van Emde Boas Trees** and **Dijkstra's algorithm** to find optimal routes and nearby drivers.
+A C++ application simulating a taxi routing and management system, leveraging **van Emde Boas Trees** for efficient driver location management and **Dijkstra's algorithm** for optimal route finding. Developed as a Data Structures and Algorithms (CS201) course project.
+
+---
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [File Descriptions](#file-descriptions)
+- [Dependencies](#dependencies)
+- [Build & Installation](#build--installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## Overview
+This project demonstrates the practical application of advanced data structures and algorithms in a real-world scenario. It provides both a **Graphical User Interface (GUI)** and a **console-based** interface for simulating taxi management, including driver discovery, route calculation, and fare estimation.
 
 ---
 
 ## Features
+- **Interactive GUI** for entering pickup and destination locations
+- **Real-time route calculation and visualization** (GUI)
+- **Nearby driver detection** using van Emde Boas Trees
+- **Fare and ETA estimation**
+- **Visual representation** of drivers, routes, and locations (GUI)
+- **Console mode** for environments without GUI support
+- **Configurable parameters** (universe size, search area, file paths)
 
-- **Interactive GUI** for location input
-- **Real-time route calculation and visualization**
-- **Nearby driver detection**
-- **Fare estimation**
-- **Visual representation** of pickup points, destinations, available taxis and shortest route
+---
+
+## Screenshots
+
+### Location Input Window
+![Main Window](/Taxi_Management_System/assets/Screenshots/location_input_window.png)
+
+### Route Visualization Window
+![Route Visualization](/Taxi_Management_System/assets/Screenshots/route_visualization_window.png)
+
+### Console Application
+![Console Application](/Taxi_Management_System/assets/Screenshots/console_application.png)
+
+---
+
+## File Descriptions
+- **final_code_GUI.cpp**: Main C++ source for the GUI application (requires wxWidgets)
+- **final_code_console.cpp**: Console-only version of the application
+- **drivers.txt**: List of driver coordinates (one pair per line, e.g., `3 4`)
+- **graph.txt**: Edge list for the city graph (format: `from to weight` per line)
 
 ---
 
 ## Dependencies
-
-- wxWidgets (GUI framework)
-- C++ Standard Library
-- Standard Template Library (STL)
-
----
-
-## Build Requirements
-
-- C++ Compiler with C++11 support
-- wxWidgets 3.0 or later
+- **C++11** or later
+- **wxWidgets 3.0+** (for GUI)
+- Standard C++ libraries (STL)
 
 ---
 
-## Some Points to Note
-1. The code zip file contains two codes- "final_code_GUI.cpp" and "final_code_console.cpp", and two text files.
-2. The codes are same, except the former supports Graphical User Interface while the latter only gives output in the console/terminal.
-3. To run the code "final_code_GUI.cpp", installation of the "wxWidgets" library is necessary, whereas the other code can be run as it is.
-4. The text files must be present in the same directory as the codes.
-5. Some parametes like the Universe Size, file paths, driver search area etc. can be changed in the starting of the code where all these are defined.
+## Build & Installation
 
----
-## Quick Start
-
-### Install wxWidgets
-
-
+### wxWidgets Installation
 #### Ubuntu/Debian
 ```bash
 sudo apt-get install libwxgtk3.0-dev
 ```
-
 #### macOS
 ```bash
 brew install wxwidgets
 ```
+#### Windows
+Download and install from [wxWidgets Downloads](https://www.wxwidgets.org/downloads/). Ensure `wx-config` is in your PATH or use the appropriate include/link flags for your setup.
 
-### Windows
-For installing on windows, visit https://www.wxwidgets.org/downloads/
+### Build Commands
+Navigate to the `Taxi_Management_System` directory:
 
-
----
-## Build and Run
-Navigate to the project folder and use the following commands
-
-For compiling GUI Application:
+**GUI Application:**
 ```bash
 g++ -std=c++11 final_code_GUI.cpp `wx-config --cxxflags --libs` -o final_code_GUI
 ```
-
-For running GUI Application:
-```bash
-./final_code_GUI
-```
-
-For compiling Console Application:
+**Console Application:**
 ```bash
 g++ -std=c++11 final_code_console.cpp -o final_code_console
 ```
 
-For running GUI Application:
-```bash
-./final_code_console
-```
 ---
+
 ## Usage
-1. Keep the text files "drivers.txt" and "graph.txt" in the same directory or write their paths in the code file where the constants "driver_file" and "graph_file" are defined at the top of the code.
-2. Run the program
-3. Enter pickup and destination coordinates 
-4. [For GUI Application] Click "Find Drivers" to view:
-    - Available drivers
-    - Shortest route
-    - Fare estimate and ETA
+1. Ensure `drivers.txt` and `graph.txt` are in the same directory as the executables, or update their paths in the source code (`driver_file`, `graph_file` constants).
+2. **Run the application:**
+   - **GUI:**
+     ```bash
+     ./final_code_GUI
+     ```
+   - **Console:**
+     ```bash
+     ./final_code_console
+     ```
+3. **Follow prompts:**
+   - Enter pickup and destination coordinates.
+   - (GUI) Click "Find Drivers" to view available drivers, shortest route, fare, and ETA.
 
 ---
 
 ## Contributors
-
-- **Gitansh Bansal** (2023MCB1294)
-- **Mohakjot Dhiman** (2023MCB1302)
-- **Kanav Puri** (2023MCB1298)
+- **Gitansh Bansal** 
+- **Mohakjot Dhiman** 
+- **Kanav Puri** 
 
 ---
 
-## Note
-This project was developed as part of the Data Structures and Algorithms (CS201) course. The implementation focuses on demonstrating the practical application of advanced data structures and algorithms in a real-world scenario.
+## Acknowledgments
+This project was developed as part of the Data Structures and Algorithms (CS201) course at IIT Ropar. It demonstrates the integration of advanced data structures and algorithms in a practical application.
 
 ---

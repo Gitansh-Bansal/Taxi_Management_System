@@ -15,8 +15,8 @@ using namespace std;
 #define v2 16 //square root of the universe size
 #define INF 99999 //infinity value for the graph
 #define k 4 //range for the nearby drivers
-#define graph_file "graph.txt" //path of the file containing the graph
-#define driver_file "drivers.txt" //path of the file containing the driver locations
+#define graph_file "../data/graph.txt" //path of the file containing the graph
+#define driver_file "../data/drivers.txt" //path of the file containing the driver locations
 
 //class to manage the vEB tree operations
 class vEBTree {
