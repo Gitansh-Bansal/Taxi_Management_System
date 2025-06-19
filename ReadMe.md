@@ -36,21 +36,28 @@ This project demonstrates the practical application of advanced data structures 
 ## Screenshots
 
 ### Location Input Window
-![Main Window](/Taxi_Management_System/assets/Screenshots/location_input_window.png)
+<div align="center">
+  <img src="assets/Screenshots/location_input_window.png" alt="Main Window" width="50%" />
+</div>
 
 ### Route Visualization Window
-![Route Visualization](/Taxi_Management_System/assets/Screenshots/route_visualization_window.png)
+<div align="center">
+  <img src="assets/Screenshots/route_visualization_window.png" alt="Route Visualization" width="100%" />
+</div>
 
 ### Console Application
-![Console Application](/Taxi_Management_System/assets/Screenshots/console_application.png)
+<div align="center">
+  <img src="assets/Screenshots/console_application.png" alt="Console Application" width="100%" />
+</div>
 
 ---
 
 ## File Descriptions
-- **final_code_GUI.cpp**: Main C++ source for the GUI application (requires wxWidgets)
-- **final_code_console.cpp**: Console-only version of the application
-- **drivers.txt**: List of driver coordinates (one pair per line, e.g., `3 4`)
-- **graph.txt**: Edge list for the city graph (format: `from to weight` per line)
+- **source/Code_GUI_App.cpp**: Main C++ source for the GUI application (requires wxWidgets)
+- **source/Code_Console_App.cpp**: Console-only version of the application
+- **data/drivers.txt**: List of driver coordinates (one pair per line, e.g., `3 4`)
+- **data/graph.txt**: Edge list for the city graph (format: `from to weight` per line)
+- **assets/Screenshots/**: Contains screenshots for documentation
 
 ---
 
@@ -80,25 +87,25 @@ Navigate to the `Taxi_Management_System` directory:
 
 **GUI Application:**
 ```bash
-g++ -std=c++11 final_code_GUI.cpp `wx-config --cxxflags --libs` -o final_code_GUI
+g++ -std=c++11 source/Code_GUI_App.cpp `wx-config --cxxflags --libs` -o GUI_App
 ```
 **Console Application:**
 ```bash
-g++ -std=c++11 final_code_console.cpp -o final_code_console
+g++ -std=c++11 source/Code_Console_App.cpp -o Console_App
 ```
 
 ---
 
 ## Usage
-1. Ensure `drivers.txt` and `graph.txt` are in the same directory as the executables, or update their paths in the source code (`driver_file`, `graph_file` constants).
+1. Ensure `drivers.txt` and `graph.txt` are in the correct directory, or update their paths in the source code (`driver_file`, `graph_file` constants).
 2. **Run the application:**
    - **GUI:**
      ```bash
-     ./final_code_GUI
+     ./GUI_App
      ```
    - **Console:**
      ```bash
-     ./final_code_console
+     ./Console_App
      ```
 3. **Follow prompts:**
    - Enter pickup and destination coordinates.
